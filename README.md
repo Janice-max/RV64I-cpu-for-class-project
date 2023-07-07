@@ -252,15 +252,15 @@ run.tcl中约束如下：
 
 ### timing report
 
-<img src="C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614210537820.png" alt="image-20230614210537820" style="zoom:54%;" />
+<img src="https://pic.imgdb.cn/item/64a7828c1ddac507ccd20eaa.jpg" style="zoom:54%;" />
 
 ### area report
 
-<img src="C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614210619195.png" alt="image-20230614210619195" style="zoom:58%;" />
+<img src="https://pic.imgdb.cn/item/64a782bc1ddac507ccd39f46.jpg" alt="image-20230614210619195" style="zoom:58%;" />
 
 ### power report
 
-![image-20230614210658459](C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614210658459.png)
+![image-20230614210658459](https://pic.imgdb.cn/item/64a782d71ddac507ccd40206.jpg)
 
 ## 性能总结
 
