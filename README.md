@@ -15,7 +15,7 @@
 
 本次作业的CPU采用五级流水线实现，数据和控制通路如下图所示：
 
-![image-20230614225257495](C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614225257495.png)
+![image-20230614225257495](https://pic.imgdb.cn/item/64a780791ddac507cccd1d9b.jpg)
 
 CPU由以下子模块组成：
 
@@ -198,6 +198,69 @@ Load_use相关尽早发现，有利于插泡。在ID阶段检测Load_use相关�
 
 检测MEM阶段是否有访问Memory的请求，如果MEM阶段需要访问Memory，则对每级流水线插入bubble，阻塞流水线运行，直到Memory读写完成传回Mem_ready信号才再次更新流水线。
 
+## 仿真验证
+
+### 仿真波形
+
+以下截图中写入0x1000的最终结果使用十进制显示。
+
+#### fib
+
+![image-20230614204854122](C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614204854122.png)
+
+#### fib_bit_count
+
+![image-20230614205015771](C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614205015771.png)
+
+#### sm4
+
+![image-20230614204403644](C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614204403644.png)
+
+### FPGA验证
+
+使用数字集成电路设计与实践课程的测试平台进行验证，使用串口回传计算结果
+
+#### 斐波那契数列计算程序
+
+计算并输出斐波那契数列前十个数字。每个数字之后都跟一个0x0A代表换行。
+
+![image-20230615153131506](C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230615153131506.png)
+
+#### 最大公约数计算程序
+
+ 计算：
+1） 35 与 15 的最大公约数
+2） 17 与 51 的最大公约数
+3） 23 与 115 的最大公约数
+4） 73 与 37 的最大公约数
+
+![image-20230615153207045](C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230615153207045.png)
+
+#### 卷积计算程序
+
+计算：
+
+<img src="C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230615154217301.png" alt="image-20230615154217301" style="zoom: 50%;" />
+
+![image-20230615153246842](C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230615153246842.png)
+
+## DC综合报告
+
+run.tcl中约束如下：
+
+<img src="C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614211014205.png" alt="image-20230614211014205" style="zoom:65%;" />
+
+### timing report
+
+<img src="C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614210537820.png" alt="image-20230614210537820" style="zoom:54%;" />
+
+### area report
+
+<img src="C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614210619195.png" alt="image-20230614210619195" style="zoom:58%;" />
+
+### power report
+
+![image-20230614210658459](C:\Users\27950\AppData\Roaming\Typora\typora-user-images\image-20230614210658459.png)
 
 ## 性能总结
 
