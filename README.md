@@ -1,7 +1,6 @@
 # RV64I-cpu-for-class-project
 # RV64I CPU设计报告
 
-<center/> 朱菁菁 &nbsp集电硕223  &nbsp 2022211052
 
 ## 微架构
 
